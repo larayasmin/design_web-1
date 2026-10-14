@@ -22,9 +22,39 @@ class Animal{
         msg = msg+`Cor: ${this.cor} Raça:${this.raca}\n`
         msg = msg+`Peso: ${this.peso}\n`
         msg = msg+`Altura: ${this.altura}\n`
-        alert(msg)
+        return msg;
     }
 }
 
-const balu = new Animal("Balu Brasil");
-const mel = new Animal("Mel", "Amerelo", 1.10, 45, "Labrador")
+class Cachorro extends Animal{
+    constructor(n, c="desconhecido", a=0.0, p=0, r="vira-lata"){
+        super(n,c,a,p,r);
+        this.patas = 4;
+    }
+    falar(){
+        alert("au!au!");
+    }
+    saudar(){
+        let msg = super.saudar();
+        msg = msg +"Sou um cachorro!";
+        alert(msg);
+    }
+}
+
+class Passaro extends Animal{
+    constructor(n, c="desconhecido", a=0.0, p=0, r="desconhecido"){
+        super(n,c,a,p,r);
+    }
+    falar(){
+        alert("fiu!fiu!");
+    }
+    saudar(){
+        let msg = super.saudar();
+        msg = msg + "Eu sou um pássaro!"
+        alert(msg);
+    }
+
+}
+const balu = new Cachorro("Balu Brasil");
+const mel = new Cachorro("Mel", "Amerelo", 1.10, 45, "Labrador");
+const leleco = new Passaro("Leleco Brasil", undefined, undefined, undefined, "Papagaio");
