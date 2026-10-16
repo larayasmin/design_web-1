@@ -52,5 +52,5 @@ class Passaro extends Animal{
 }
 
 const estrelinha = new Cachorro("Estrelinha Bolinha");
-const pretinho = new Cachorro("Pretinho", "preto e branco", 1.10, 45, "Vira-lata");
+const pretinho = new Cachorro("Pretinho Cunha", "preto e branco", 1.10, 45, "Vira-lata");
 const quiquinho = new Passaro("Quiquinho chiquinho", undefined, undefined, undefined, "Periquito");
